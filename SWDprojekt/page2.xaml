@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    
+
 
     <Grid>
         <Grid.RowDefinitions>
@@ -29,12 +29,16 @@
             Grid.Column="0"
             Grid.Row="1"
             Background="Yellow"
-            Grid.ColumnSpan="2"/>
+            Grid.ColumnSpan="2" Margin="0,0,-640,0"/>
         <Border
             Grid.Column="0"
             Grid.Row="2"
             Background="Red"
-            Grid.ColumnSpan="2"/>
+            Grid.ColumnSpan="2" Margin="0,0,-630,-350" RenderTransformOrigin="0.5,0.5">
+            <Border.RenderTransform>
+                <CompositeTransform SkewX="0" TranslateX="0"/>
+            </Border.RenderTransform>
+        </Border>
 
 
         <Viewbox

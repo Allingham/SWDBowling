@@ -13,13 +13,18 @@ namespace SWDprojekt
         public ObservableCollection<Deltager> Deltagere { get; set; }
         public DateTime Dato{ get; set; }
         public Bane ValgtBane{ get; set; }
+        public ObservableCollection<Bane> Baner { get; set; }
 
         public Booking(ObservableCollection<Deltager> delagere, DateTime dato, Bane valgtBane){
             Deltagere = delagere;
             Dato = dato;
             ValgtBane = valgtBane;
-        }
 
+            Baner.Add(new Bane(1,false));
+            Baner.Add(new Bane(2,true));
+
+        }
+        
      
 
         public void Add(String name, bool voksen)
