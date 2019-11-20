@@ -15,10 +15,8 @@ namespace SWDprojekt
         public Bane ValgtBane{ get; set; }
         public ObservableCollection<Bane> Baner { get; set; }
 
-        public Booking(ObservableCollection<Deltager> delagere, DateTime dato, Bane valgtBane){
-            Deltagere = delagere;
-            Dato = dato;
-            ValgtBane = valgtBane;
+        public Booking(){
+            Deltagere = new ObservableCollection<Deltager>();
 
             Baner.Add(new Bane(1,false));
             Baner.Add(new Bane(2,true));
