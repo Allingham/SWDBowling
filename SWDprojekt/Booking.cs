@@ -17,6 +17,8 @@ namespace SWDprojekt
 
         public Booking(){
             Deltagere = new ObservableCollection<Deltager>();
+            Baner = new ObservableCollection<Bane>();
+            Dato = DateTime.Now;
 
             Baner.Add(new Bane(1,false));
             Baner.Add(new Bane(2,true));
