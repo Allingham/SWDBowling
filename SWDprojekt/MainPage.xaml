@@ -9,11 +9,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
-
+<Page.DataContext>
+        <local:Booking/>
+</Page.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition />
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -25,20 +28,22 @@
             Grid.ColumnSpan="2"
             Orientation="Horizontal">
             <Button Content="Dato">
-                <Custom:Interaction.Behaviors>
-                    <Custom1:EventTriggerBehavior EventName="Click">
-                        <Custom1:NavigateToPageAction TargetPage="SWDprojekt.page2" />
-                    </Custom1:EventTriggerBehavior>
-                </Custom:Interaction.Behaviors>
             </Button>
-            <Button Content="Bane">
+            <Button Content="Personer" Margin="2,0,0,0">
                 <Custom:Interaction.Behaviors>
                     <Custom1:EventTriggerBehavior EventName="Click">
                         <Custom1:NavigateToPageAction TargetPage="SWDprojekt.page3" />
                     </Custom1:EventTriggerBehavior>
                 </Custom:Interaction.Behaviors>
             </Button>
-            <Button Content="Bestil">
+            <Button Content="Bane" Margin="2,0,0,0">
+                <Custom:Interaction.Behaviors>
+                    <Custom1:EventTriggerBehavior EventName="Click">
+                        <Custom1:NavigateToPageAction TargetPage="SWDprojekt.page3" />
+                    </Custom1:EventTriggerBehavior>
+                </Custom:Interaction.Behaviors>
+            </Button>
+            <Button Content="Bestil" Margin="2,0,0,0">
                 <Custom:Interaction.Behaviors>
                     <Custom1:EventTriggerBehavior EventName="Click">
                         <Custom1:NavigateToPageAction TargetPage="SWDprojekt.page4" />
@@ -53,6 +58,17 @@
             <TextBlock Text="Dato bestilling:" />
             <ListView />
         </StackPanel>
+        
+        <Button Grid.Row="2" Grid.Column="1" Content="Næste" Margin="2,0,0,0" HorizontalAlignment="Right">
+            <Custom:Interaction.Behaviors>
+                <Custom1:EventTriggerBehavior EventName="Click">
+                    <Custom1:NavigateToPageAction TargetPage="SWDprojekt.page2" />
+                </Custom1:EventTriggerBehavior>
+            </Custom:Interaction.Behaviors>
+        </Button>
+        
+        <CalendarDatePicker Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Date="{Binding Dato}"/>
+
 
     </Grid>
 </Page>
