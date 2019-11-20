@@ -14,6 +14,7 @@ namespace SWDprojekt
         public Bane(int baneId, bool bander){
             BaneID = baneId;
             Bander = bander;
+            //Hej jeg kommenterer
         }
     }
 }
