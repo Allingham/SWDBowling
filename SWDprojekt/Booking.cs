@@ -13,8 +13,16 @@ namespace SWDprojekt
 {
     class Booking : INotifyPropertyChanged
     {
+        private DateTime _dato;
         public ObservableCollection<Deltager> Deltagere { get; set; }
-        public DateTime Dato{ get; set; }
+
+        public DateTime Dato{
+            get => _dato;
+            set { _dato = value;
+                OnPropertyChanged();
+            }
+        }
+
         public Bane ValgtBane{ get; set; }
         public ObservableCollection<Bane> Baner { get; set; }
 
