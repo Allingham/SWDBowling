@@ -8,8 +8,93 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    
+
     <Grid>
-        <Button></Button>
-        <Button></Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border
+            Grid.Column="0"
+            Grid.Row="0"
+            Background="Red"
+            Grid.ColumnSpan="2"/>
+        <Border
+            Grid.Column="0"
+            Grid.Row="1"
+            Background="Yellow"
+            Grid.ColumnSpan="2"/>
+        <Border
+            Grid.Column="0"
+            Grid.Row="2"
+            Background="Red"
+            Grid.ColumnSpan="2"/>
+
+
+        <Viewbox
+            Grid.Column="0"
+            Grid.Row="1"
+            Grid.ColumnSpan="2"
+            Stretch="Uniform">
+            <TextBlock
+                FontFamily="Comic Sans MS"
+                FontStyle="Italic"
+                Foreground="Magenta"
+                Text="Bowling - Booking"/>
+        </Viewbox>
+
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="2"
+            Margin="20">
+            <Viewbox
+                HorizontalAlignment="Center"
+                Stretch="Uniform"
+                MaxHeight="65">
+                <TextBlock
+                    FontFamily="Comic Sans MS"
+                    FontStyle="Italic"
+                    Foreground="Magenta"
+                    Text="Navne på spillere"/>
+            </Viewbox>
+            <ListView/>
+        </StackPanel>
+        <StackPanel
+            Grid.Column="1"
+            Grid.Row="2"
+            Margin="20">
+            <Viewbox
+                HorizontalAlignment="Center"
+                Stretch="Uniform"
+                MaxHeight="40"
+                Margin="0,65,0,0">
+                <TextBlock
+                    FontSize="20"
+                    Text="Antal deltagere"/>
+            </Viewbox>
+            <TextBox
+                Margin="200,0,200,0"
+                FontFamily="Comic Sans MS"
+                />
+            <Viewbox
+                HorizontalAlignment="Center"
+                Stretch="Uniform"
+                MaxHeight="40">
+                <TextBlock
+                    Text="Navne på deltagere"
+                    FontSize="20"/>
+            </Viewbox>
+            <TextBox
+                Margin="200,0,200,0"
+                FontFamily="Comic Sans MS"
+            />
+        </StackPanel>
     </Grid>
+
 </Page>
